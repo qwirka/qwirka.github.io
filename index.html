@@ -1,72 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <!-- Load Tailwind CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
-<style>
-    html,body {
-               height: 100%;
-               overflow: hidden;
-               }
-
- .bg-blue-500 {
-               height: 100%;
-               }
-
-        .loader {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <!-- Load Tailwind CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+  <style>
+    html,
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+    
+    .bg-blue-500 {
+      height: 100%;
+    }
+    
+    .loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .dot {
+      height: 12px;
+      width: 12px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      margin: 0 8px;
+      animation: dot-pulse 1s ease-in-out infinite;
+    }
+    
+    .dot:nth-child(1) {
+      animation-delay: -0.2s;
+    }
+    
+    .dot:nth-child(2) {
+      animation-delay: -0.1s;
+    }
+    
+    @keyframes dot-pulse {
+      0% {
+        transform: scale(1);
       }
-      .dot {
-        height: 12px;
-        width: 12px;
-        border-radius: 50%;
-        background-color: #ffffff;
-        margin: 0 8px;
-        animation: dot-pulse 1s ease-in-out infinite;
+      50% {
+        transform: scale(1.2);
       }
-      .dot:nth-child(1) {
-        animation-delay: -0.2s;
+      100% {
+        transform: scale(1);
       }
-      .dot:nth-child(2) {
-        animation-delay: -0.1s;
-      }
-      @keyframes dot-pulse {
-        0% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-        100% {
-          transform: scale(1);
-        }
-      }
-    .logo{
-           width:93px;
-           height:100px;
-           }
-    </style>
+    }
+    
+    .logo {
+      width: 93px;
+      height: 100px;
+    }
+  </style>
 </head>
 <body>
-<!-- HTML -->
-<div class="bg-blue-500 h-screen flex justify-center items-center">
-  <div class="w-5/6 md:w-1/2 lg:w-1/3 xl:w-1/4 text-center">
-    <img src="logo.png" alt="Logo" class="logo w-1/2 mx-auto">
-    <h1 class="text-white text-4xl font-bold my-8">QWIRKA</h1>
-    <p class="text-white text-lg mb-4 animate-pulse"><i>Loading, please wait...</i></p>
-    
-   <div class="loader">
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
-</div>
-  </div>
-</div>
+  <div class="bg-blue-500 flex justify-center items-center">
+    <div class="w-5/6 md:w-1/2 lg:w-1/3 xl:w-1/4 text-center">
+      <img src="logo.png" alt="Logo" class="logo w-1/2 mx-auto">
+      <h1 class="text-white text-4xl font-bold my-8">QWIRKA</h1>
+      <p class="text-white text-lg mb-4">
+      <!-- loading component -->
+	<div class="flex justify-center items-center space-x-1 text-sm text-white">
+		 
+				<svg fill='none' class="w-6 h-6 animate-spin" viewBox="0 0 32 32" xmlns='http://www.w3.org/2000/svg'>
+					<path clip-rule='evenodd'
+						d='M15.165 8.53a.5.5 0 01-.404.58A7 7 0 1023 16a.5.5 0 011 0 8 8 0 11-9.416-7.874.5.5 0 01.58.404z'
+						fill='currentColor' fill-rule='evenodd' />
+				</svg>
 
+      <i class="animate-pulse">Loading, please wait...</i></div>
+      </p>
+    </div>
+  </div>
+  
 </body>
 </html>
+
+
