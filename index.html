@@ -15,6 +15,37 @@
             0% { transform: rotate(0); }
             100% { transform: rotate(360deg); }
         }
+
+        .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .dot {
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: #9b4dca;
+        margin: 0 8px;
+        animation: dot-pulse 1s ease-in-out infinite;
+      }
+      .dot:nth-child(1) {
+        animation-delay: -0.2s;
+      }
+      .dot:nth-child(2) {
+        animation-delay: -0.1s;
+      }
+      @keyframes dot-pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
     </style>
 </head>
 <body>
