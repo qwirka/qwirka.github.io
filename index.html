@@ -65,17 +65,31 @@ form input[type="password"] {
 }
 
 .btnfloat{
-        border-bottom: 1px solid #000000;       
+        border-bottom: 1px solid #2164F3;  
 }
+
+label{
+    color:#2164F3;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus { border-color: none; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.090) inset, 0 0 8px rgba(0, 0, 0, 0.050); outline: 0 none; }
 
 .btnsty{
     height:45px;
     border-radius:10px;
 }
 
+h1{
+    color:#2164F3;
+}
+
 .recoverybtn{
     float:right;
     margin-bottom:15px;
+}
+
+.headingtxt{
+    margin-bottom:10px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -120,14 +134,17 @@ form input[type="password"] {
   </div>
   <!-- end of splash-->
 
-
-
 	<div class="container-fluid">
 		<div class="row justify-content-center align-items-center min-vh-100">
 			<div class="col-sm-6 col-md-4">
 				
 						<form class="bg-white rounded-lg p-4">
 						
+						<div class="text-center headingtxt">
+						<h1>QwirkaSearch</h1>
+						<b style="color:dimgray">
+					Log into your account</b>
+				</div>
 				
 					<div class="form-floating mb-3 btnfloat">
 						<input type="email" class="form-control border-0" id="floatingInput" placeholder="name@example.com">
@@ -137,7 +154,7 @@ form input[type="password"] {
 						<input type="password" class="form-control border-0" id="floatingPassword" placeholder="Password">
 						<label for="floatingPassword">Password</label>
 					</div>
-					<label class="recoverybtn">Forgot Password?</label>
+					<label class="recoverybtn" style="color:dimgray"><b>Forgot Password?</b></label>
 					<button type="submit" class="btn btn-primary w-100 btnsty">Login</button>
 				</form>
 			</div>
